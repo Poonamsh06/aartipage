@@ -47,6 +47,9 @@ class _HomePageState extends State<HomePage> {
 
     List<String> gridMembersPath = [
       "/BooksPage",
+      "/MagazinePage",
+      "/ParvachanPage",
+      "/AartiPage",
     ];
 
     return Center(
