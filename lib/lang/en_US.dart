@@ -17,7 +17,7 @@ const Map<String, String> enUS = {
   "Upapuranas": "Upapuranas",
   "HomePage" : "Home Page",
   "Profile" : "Profile",
-  "Shiv Aarti":"Shiv Arti",
+  "Shiv Aarti":"Shiv Aarti",
   "Aartis": "Aartis",
    "PopularBooks": "Popular Books",
     "Raamayan" : "Raamayan",

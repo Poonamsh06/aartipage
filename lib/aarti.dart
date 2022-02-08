@@ -2,7 +2,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pujapurohit/utils/text_reader.dart';
-import '../home_page.dart';
 import '../localization_service.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 class AartiPage extends StatefulWidget {
@@ -23,24 +22,7 @@ class _AartiPageState extends State<AartiPage> {
 
 
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
-          title:
-          Text("Aartis".tr,
-            style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 25
-            ),
-          ),
-          leading:
-          IconButton(
-            icon: Icon(Icons.arrow_back_outlined,color: Colors.black,),
-            onPressed: () =>
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                ),
-          ),),
+
         body:
         Container(
 
@@ -49,20 +31,20 @@ class _AartiPageState extends State<AartiPage> {
             children:[
 
               card("lib/assets/text/shivaarti.txt","http://www.earthandskyconnection.com/wp-content/uploads/2016/11/lord-shiva.jpg",    "Shiv Aarti"),
-              card(    "lib/assets/text/ganeshaarti.txt","https://1.bp.blogspot.com/-bgxsG_kythM/XWy1E1f_GwI/AAAAAAAAFGA/3JQLA1urFT87Eiktrm3AYS0pPwYqvuhswCLcBGAs/s1600/lord%2Bvinayaka%2Bhd.png",
+              card("lib/assets/text/ganeshaarti.txt","https://1.bp.blogspot.com/-bgxsG_kythM/XWy1E1f_GwI/AAAAAAAAFGA/3JQLA1urFT87Eiktrm3AYS0pPwYqvuhswCLcBGAs/s1600/lord%2Bvinayaka%2Bhd.png",
                 "Shri Ganesh Aarti",
               ),
 
-              card(    "lib/assets/text/hanumaanaarti.txt","https://i.pinimg.com/736x/05/ef/20/05ef203052f0a1ee15aff1b97f9ee6a4.jpg",    "Hanuman Aarti",
+              card("lib/assets/text/hanumaanaarti.txt","https://i.pinimg.com/736x/05/ef/20/05ef203052f0a1ee15aff1b97f9ee6a4.jpg",    "Hanuman Aarti",
 
               ),
-              card(    "lib/assets/text/krishnaaarti.txt","https://th.bing.com/th/id/R.79e8bfdbe687451defec010ef148e874?rik=Q8uB7Ut6VmxIOg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fwc1779526.jpg&ehk=HviAoW2Nhu%2fYBailOatZhwFRNWCx5ulIM7Bxos%2bJCWY%3d&risl=&pid=ImgRaw&r=0",
+              card("lib/assets/text/krishnaaarti.txt","https://th.bing.com/th/id/R.79e8bfdbe687451defec010ef148e874?rik=Q8uB7Ut6VmxIOg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fwc1779526.jpg&ehk=HviAoW2Nhu%2fYBailOatZhwFRNWCx5ulIM7Bxos%2bJCWY%3d&risl=&pid=ImgRaw&r=0",
                 "Krishna Aarti",
               ),
-              card(    "lib/assets/text/durgaaarti.txt","https://image.winudf.com/v2/image/Y29tLnRhYmtlZXkuZHVyZ2FtYWFoZHdhbGxwYXBlcnNfc2NyZWVuXzBfMTUxODYyNjMxNV8wNDg/screen-0.jpg?fakeurl=1&type=.jpg",
+              card("lib/assets/text/durgaaarti.txt","https://image.winudf.com/v2/image/Y29tLnRhYmtlZXkuZHVyZ2FtYWFoZHdhbGxwYXBlcnNfc2NyZWVuXzBfMTUxODYyNjMxNV8wNDg/screen-0.jpg?fakeurl=1&type=.jpg",
                 "Maa Durga Aarti",
               ),
-              card(    "lib/assets/text/lakshmiaarti.txt","https://th.bing.com/th/id/R.8bab3b9b71b9f9f2d53eeacdbee82419?rik=Oym7jo497WfJ%2fg&riu=http%3a%2f%2fwww.hindisoch.com%2fwp-content%2fuploads%2f2017%2f07%2fLaxmi-Maa-Pics.jpg&ehk=c1cE0jyLnp8fXD14VyO%2f6zi2tjZXsUoLgP0Vsh%2b3bQ0%3d&risl=&pid=ImgRaw&r=0",
+              card("lib/assets/text/lakshmiaarti.txt","https://th.bing.com/th/id/R.8bab3b9b71b9f9f2d53eeacdbee82419?rik=Oym7jo497WfJ%2fg&riu=http%3a%2f%2fwww.hindisoch.com%2fwp-content%2fuploads%2f2017%2f07%2fLaxmi-Maa-Pics.jpg&ehk=c1cE0jyLnp8fXD14VyO%2f6zi2tjZXsUoLgP0Vsh%2b3bQ0%3d&risl=&pid=ImgRaw&r=0",
                 "Maa Lakshami Aarti",
               ),
               card(    "lib/assets/text/paarwatiaarti.txt","https://th.bing.com/th/id/OIP.8yrfCySpjEiArzMRE0ZYXwHaJf?pid=ImgDet&rs=1",
@@ -117,7 +99,7 @@ class card extends StatelessWidget {
         color: Colors.grey[500],
         padding: EdgeInsets.symmetric(horizontal: 30,vertical: 5),
         child: Card(
-          elevation: 5.0,
+          elevation: 7.0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
           ),
@@ -129,10 +111,10 @@ class card extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 7.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+             // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+               //   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
                       width: 60.0,
@@ -144,7 +126,7 @@ class card extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 10.0,
+                      width: 15.0,
                     ),
 
                        Column(
@@ -157,7 +139,7 @@ class card extends StatelessWidget {
                               names.tr,
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 16.0,
+                                fontSize: 15.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -170,10 +152,12 @@ class card extends StatelessWidget {
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.symmetric(
-                      horizontal: 10.0, vertical: 10.0),
-                  child: Icon(
-                    Icons.arrow_forward_ios_outlined,
-                    color: Colors.black,
+                      horizontal: 7.0, vertical: 7.0),
+                  child: Center(
+                    child: Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],
